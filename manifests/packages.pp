@@ -1,7 +1,7 @@
 class postfix::packages {
   assert_private()
 
-  package { 'postfix':
+  package { $postfix::postfix_package:
     ensure => $postfix::postfix_ensure,
   }
 

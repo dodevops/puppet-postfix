@@ -84,6 +84,8 @@
 #
 # [*postfix_ensure*]      - (string) The ensure value of the postfix package
 #
+# [*postfix_package*]     - (string) Name of the postfix package
+#
 # [*mailx_ensure*]        - (string) The ensure value of the mailx package
 #
 # === Examples
@@ -135,6 +137,7 @@ class postfix (
   Variant[Integer[2, 3], Boolean] $use_schleuder       = false,         # postfix_use_schleuder
   Boolean                         $use_sympa           = false,         # postfix_use_sympa
   String                          $postfix_ensure      = 'present',
+  String                          $postfix_package     = 'postfix',
   String                          $mailx_ensure        = 'present',
   String                          $service_ensure      = 'running',
   Boolean                         $service_enabled     =  true,
